@@ -15,12 +15,14 @@
   ],
 
   "action":{
-    "default_icon": "icons/border-48.png",
+    "default_icon": "img/Clock-32.png",
     "default_popup": "popup.html"
   },
 
   "icons": {
-    "48": "icons/border-48.png"
+    "16": "img/Clock-16.png",
+    "32": "img/Clock-32.png",
+    "96": "img/Clock-96.png"
   },
 
   "permissions":[
