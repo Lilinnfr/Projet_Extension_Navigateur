@@ -8,6 +8,29 @@
     <title>Timer Extension</title>
 </head>
 <body>
+
+    <div>
+        
+    <label for="time-select">Hello, Choose a time:</label>
+
+    <select name="myTime" id="time-select">
+        <option value="">--Please choose an option--</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
+    </select>
+
+    </div>
+
+    <div>
+        <!-- à la place de p, je pense qu'il faut avoir une input et minut doit être dans value de la -->
+        <h1 id="time">20:00</h1>
+        <input id="btnStart" type="button" value="Start"/>
+        <input id="btnStop" type="button" value="Stop"/>
+    </div>
     
     <script src="./popup.js"></script>
 </body>
