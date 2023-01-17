@@ -1,63 +1,100 @@
 let btnStart = document.getElementById('btnStart');
-let btnStop = document.getElementById('btnStop');
-let time = document.getElementById("time");
+let times = document.getElementById("time1");
 let timeSelect = document.getElementById('time-select')
 
-// fait choisir la valeur des options dans select
-timeSelect.addEventListener('change', e =>{
-
-    let valueOption = timeSelect.value;
-    console.log(valueOption);
-
-})
-
-// fait créer le timer
-let check = null;
+let check = null
 function printDuration() {
 
-    if (check == null) {
-
-        let seconds = 5;
-        let minutes = 1;
-
-        check = setInterval(function () {
-
-            seconds -= 1;
-            if(seconds == -1){
-
-                minutes -= 1;
-                seconds = 5;
-
-            }
-
-            if(minutes == -1){
-
-                minutes = 20;
-                seconds = '00';
-                clearInterval(check);
-                check = null;
-
-            }
-
-            time.innerText = minutes + ":" + seconds;
-
-        }, 1000);
+        if (check == null) {
+            
+            let seconds = 60;
+            let minutes = 1;
+            
+            check = setInterval(function () {
+                
+                seconds -= 1;
+                if(seconds == -1){
+                    
+                    minutes -= 1;
+                    seconds = 60;
+                    
+                }
+                
+                if(minutes == -1){
+                    
+                    minutes = 20;
+                    seconds = '00';
+                    clearInterval(check);
+                    check = null;
+                    
+                }
+                
+                times.innerText = minutes + ":" + seconds;
+                
+            }, 1000);
+        }
     }
-}
 
-// fait supprimer le timer
-function stop() {
+let check1 = null
+chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
 
-    clearInterval(check);
-    check = null;
-    time.innerText = '20:00';
+    console.log("response seconds is ===>", response.timeSeconds)
+    console.log('respons minutes is --->', response.timeMinutes)
+    
+    
+    let currentSeconds = parseInt(response.timeSeconds);
+    let currentMinutes = parseInt(response.timeMinutes)
+    
+    let seconds = currentSeconds;
+    let minutes = currentMinutes;
+    console.log("seconds:", seconds)
+    
+    if(currentSeconds != 0){
 
+        btnStart.style.display = "none"
+
+        if (check1 == null) {
+            
+            check1 = setInterval(()=>{
+                
+                seconds -= 1;
+        
+                if(seconds == -1){
+
+                    minutes -= 1
+                    seconds = 60
+
+                }
+        
+                if(minutes == -1){
+
+                    minutes = 20
+                    seconds = '00'
+                    clearInterval(check1);
+                    btnStart.style.display = "block"
+
+                }
+        
+                times.innerText = minutes + ":" + seconds
+        
+            },1000)
+        }
+
+    }
+
+});
+
+function startTime() {
+    
+    printDuration()
+    btnStart.style.display = "none"
+   
+    chrome.runtime.sendMessage({cmd: "START_TIME"}, response =>{
+        printDuration()
+        console.log("-----------",printDuration())
+    });
 }
 
 // fait activer le timer
-btnStart.addEventListener('click', printDuration)
+btnStart.addEventListener('click', startTime)
 
-// fait supprimer le timer
-btnStop.addEventListener('click', e =>{
-    stop();
-})

@@ -5,6 +5,15 @@
   "description": "add an extension to Google Chrome when we don't manipulate the webpage for a certain time",
   "version": "1.0",
 
+  "content_scripts":[
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+
   "background": {
     "service_worker": "background.js"
   },
@@ -14,9 +23,12 @@
     "http://*/*"
   ],
 
+
   "action":{
+
     "default_icon": "img/Clock-16.png",
     "default_popup": "popup.html"
+    
   },
 
   "icons": {
@@ -24,6 +36,8 @@
   },
 
   "permissions":[
+    "alarms",
+    "notifications",
     "storage",
     "activeTab",
     "tabs"
