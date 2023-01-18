@@ -1,21 +1,33 @@
 {
   "name": "Pikachu Everywhere",
   "description": "Replace every image with Pikachu images",
-  "version": "1.0",
   "manifest_version": 3,
+  "version": "1.0",
+
   "content_scripts":[
     {
-        "js": ["content.js"],
-        "matches":[
-            "<all_urls>"
-            ]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
     }
   ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+
 
 
   "action":{
     "default_icon": "img/Clock-32.png",
     "default_popup": "popup.html"
+    
   },
 
   "icons": {
@@ -25,19 +37,15 @@
     "96": "img/Clock-96.png"
 
   },
-  
-  "permissions": [
 
+  "permissions":[
+    "alarms",
+    "notifications",
     "nativeMessaging",
     "activeTab",
     "tabs",
-    "notifications",
     "storage",
     "scripting",
-    "declarativeContent",
-    "alarms"
-  ],
-  "background": {
-      "service_worker": "background.js"
-    }
+    "declarativeContent"
+  ]
 }
