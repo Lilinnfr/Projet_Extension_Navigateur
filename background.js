@@ -5,11 +5,12 @@ let currentSeconds = 0;
 let currentMinutes = 0;
 let check = null
 
+// timeur
 timerTime = function printDuration() {
 
       if (check == null) {
           
-          let seconds = 60;
+          let seconds = 59;
           let minutes = 1;
           
           check = setInterval(function () {
@@ -18,7 +19,7 @@ timerTime = function printDuration() {
               if(seconds == -1){
                   
                   minutes -= 1;
-                  seconds = 60;
+                  seconds = 59;
                   
               }
               
@@ -37,6 +38,7 @@ timerTime = function printDuration() {
           }, 1000);
         }
 }
+
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   

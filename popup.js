@@ -7,7 +7,7 @@ function printDuration() {
 
         if (check == null) {
             
-            let seconds = 60;
+            let seconds = 59;
             let minutes = 1;
             
             check = setInterval(function () {
@@ -16,7 +16,7 @@ function printDuration() {
                 if(seconds == -1){
                     
                     minutes -= 1;
-                    seconds = 60;
+                    seconds = 59;
                     
                 }
                 
@@ -62,7 +62,7 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
                 if(seconds == -1){
 
                     minutes -= 1
-                    seconds = 60
+                    seconds = 59
 
                 }
         
