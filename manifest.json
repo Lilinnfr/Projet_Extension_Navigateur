@@ -12,6 +12,23 @@
     }
   ],
 
+
+  "action":{
+    "default_icon": "img/Clock-32.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+
+    "16": "img/Clock-16.png",
+    "32": "img/Clock-32.png",
+    "96": "img/Clock-96.png"
+
+  },
+
+
+}
+
   "permissions": [
 
     "nativeMessaging",
@@ -19,12 +36,11 @@
     "tabs",
     "notifications",
     "storage",
+    "scripting",
+    "declarativeContent",
     "alarms"
   ],
   "background": {
       "service_worker": "background.js"
     },
-    "action": {
-      "default_popup":"popup.html"
-    }
 }
