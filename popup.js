@@ -60,4 +60,5 @@ btnStart.addEventListener('click', printDuration)
 // fait supprimer le timer
 btnStop.addEventListener('click', e =>{
     stop();
+
 })
