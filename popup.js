@@ -35,3 +35,10 @@ btnbook.addEventListener('click', displayBook);
 function displayBook() {
     book.style.display = "block";
 }
+
+// fait supprimer le timer
+btnStop.addEventListener('click', e =>{
+    stop();
+
+})
+
