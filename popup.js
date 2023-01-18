@@ -1,63 +1,37 @@
 let btnStart = document.getElementById('btnStart');
-let btnStop = document.getElementById('btnStop');
 let time = document.getElementById("time");
-let timeSelect = document.getElementById('time-select')
+let timeSelect = document.getElementById('time-select');
 
-// fait choisir la valeur des options dans select
-timeSelect.addEventListener('change', e =>{
 
-    let valueOption = timeSelect.value;
-    console.log(valueOption);
 
-})
 
-// fait créer le timer
-let check = null;
-function printDuration() {
 
-    if (check == null) {
+//=================================================Appels d'APIs pour les albums, films et livres
+let btnalbum = document.getElementById('btnalbum');
+let album = document.getElementById('album');
 
-        let seconds = 5;
-        let minutes = 1;
+btnalbum.addEventListener('click', displayAlbum);
 
-        check = setInterval(function () {
-
-            seconds -= 1;
-            if(seconds == -1){
-
-                minutes -= 1;
-                seconds = 5;
-
-            }
-
-            if(minutes == -1){
-
-                minutes = 20;
-                seconds = '00';
-                clearInterval(check);
-                check = null;
-
-            }
-
-            time.innerText = minutes + ":" + seconds;
-
-        }, 1000);
-    }
+function displayAlbum() {
+    album.style.display = "block";
 }
 
-// fait supprimer le timer
-function stop() {
 
-    clearInterval(check);
-    check = null;
-    time.innerText = '20:00';
+let btnmovie = document.getElementById('btnmovie');
+let movie = document.getElementById('movie');
 
+btnmovie.addEventListener('click', displayMovie);
+
+function displayMovie() {
+    movie.style.display = "block";
 }
 
-// fait activer le timer
-btnStart.addEventListener('click', printDuration)
 
-// fait supprimer le timer
-btnStop.addEventListener('click', e =>{
-    stop();
-})
+let btnbook = document.getElementById('btnbook');
+let book = document.getElementById('book');
+
+btnbook.addEventListener('click', displayBook);
+
+function displayBook() {
+    book.style.display = "block";
+}

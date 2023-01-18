@@ -30,7 +30,9 @@
   "permissions":[
     "storage",
     "activeTab",
-    "tabs"
+    "tabs",
+    "scripting",
+    "declarativeContent"
   ]
 
 }
