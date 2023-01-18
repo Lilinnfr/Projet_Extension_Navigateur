@@ -25,10 +25,7 @@
     "96": "img/Clock-96.png"
 
   },
-
-
-}
-
+  
   "permissions": [
 
     "nativeMessaging",
@@ -42,5 +39,5 @@
   ],
   "background": {
       "service_worker": "background.js"
-    },
+    }
 }
