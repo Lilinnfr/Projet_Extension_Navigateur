@@ -1,8 +1,7 @@
 {
-
+  "name": "Pikachu Everywhere",
+  "description": "Replace every image with Pikachu images",
   "manifest_version": 3,
-  "name": "Timer Extension",
-  "description": "add an extension to Google Chrome when we don't manipulate the webpage for a certain time",
   "version": "1.0",
 
   "content_scripts":[
@@ -24,23 +23,29 @@
   ],
 
 
-  "action":{
 
-    "default_icon": "img/Clock-16.png",
+  "action":{
+    "default_icon": "img/Clock-32.png",
     "default_popup": "popup.html"
     
   },
 
   "icons": {
-    "32": "img/Clock-32.png"
+
+    "16": "img/Clock-16.png",
+    "32": "img/Clock-32.png",
+    "96": "img/Clock-96.png"
+
   },
 
   "permissions":[
     "alarms",
     "notifications",
-    "storage",
+    "nativeMessaging",
     "activeTab",
-    "tabs"
+    "tabs",
+    "storage",
+    "scripting",
+    "declarativeContent"
   ]
-
 }

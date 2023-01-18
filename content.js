@@ -1,18 +1,14 @@
-// console.log("chrome extension go hoho?");
+let images = document.getElementsByTagName('img');
+for(let i = 0; i < images.length;i++){
+    chrome.runtime.sendMessage({msg: 'image', index:i},function({data,index}){
+        images[index].src = data.link;
+    });
+};
+//========================================================
+let paragraphs = document.getElementsByTagName('body');
+let i = 0;
 
-// let paragraphs = document.getElementsByTagName('p')
-
-
-
-// function gotMessage(request, sender, sendResponse){
-    
-//     if(request.txt === "hello go"){
-        
-//         for (elt of paragraphs) {
-//             elt.style['background-color'] = "#EAEAEA";
-//         }
-//     }
-//     console.log(request.txt)
-// }
-
-// chrome.runtime.onMessage.addListener(gotMessage)
+while(i < paragraphs.length){
+    paragraphs[i].style['border'] = '20px solid black';
+    i++;
+};
