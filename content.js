@@ -4,11 +4,13 @@ for(let i = 0; i < images.length;i++){
         images[index].src = data.link;
     });
 };
-//========================================================
-let paragraphs = document.getElementsByTagName('body');
-let i = 0;
 
-while(i < paragraphs.length){
-    paragraphs[i].style['border'] = '20px solid black';
-    i++;
-};
+//========================================================
+// let paragraphs = document.getElementsByTagName('body');
+// let i = 0;
+// while(i < paragraphs.length){
+//     paragraphs[i].style['border'] = '20px solid black';
+//     i++;
+// };
+
+
