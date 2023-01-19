@@ -1,6 +1,6 @@
 body {
-    border: 2px solid #42B3C6;
-    margin: 0px;
+    border: none;
+    margin: 0;
     padding: 0;
     min-height: 15em;
     min-width: 25em;
@@ -8,6 +8,14 @@ body {
 }
 
 /* ----------------------------------------------- timer style */
+
+#container-titre-page1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
 #timer-container{
     width: 100%;
     height: 300px;
@@ -46,15 +54,37 @@ body {
 -webkit-filter: brightness(91%) hue-rotate(229deg) saturate(756%) opacity(29%) contrast(86%);
 -moz-filter: brightness(91%) hue-rotate(229deg) saturate(756%) opacity(29%) contrast(86%);
 }
-/* ----------------------------------------------- fin timer style */
 
-.title {
-    background-color: #ADCDDC;
+#continair-button{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.button1{
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    background-color: #dcf3cf;
+}
+/* ----------------------------------------------- fin timer style */
+#titre-page1{
     width: 100%;
-    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #ADCDDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    margin-left: 5px;
     color: black;
     font-weight: bold;
-    margin: 3px;
 }
 
 .content {
