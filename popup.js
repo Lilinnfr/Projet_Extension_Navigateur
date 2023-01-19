@@ -99,6 +99,8 @@ function startTime() {
 btnStart.addEventListener('click', startTime)
 
 
+
+// CODE LYDIE
 //=================================================Appels d'APIs pour les albums, films et livres
 let btnalbum = document.getElementById('btnalbum');
 let album = document.getElementById('album');
