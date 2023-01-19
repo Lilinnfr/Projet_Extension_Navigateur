@@ -99,4 +99,3 @@ function startTime() {
 btnStart.addEventListener('click', startTime)
 
 
-
