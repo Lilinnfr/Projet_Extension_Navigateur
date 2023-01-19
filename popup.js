@@ -99,3 +99,4 @@ function startTime() {
 
 // fait activer le timer
 btnStart.addEventListener('click', startTime)
+
