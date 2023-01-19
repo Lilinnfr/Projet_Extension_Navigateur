@@ -1,5 +1,6 @@
 let btnStart = document.getElementById('btnStart');
 let times = document.getElementById("time1");
+let imgTimer = document.getElementById("time-loding")
 let timeSelect = document.getElementById('time-select')
 
 let check = null
@@ -22,14 +23,16 @@ function printDuration() {
                 
                 if(minutes == -1){
                     
-                    minutes = 20;
+                    minutes = 2;
                     seconds = '00';
                     clearInterval(check);
-                    check = null;
-                    
+                    check = null;                    
                 }
+               
+
+                    imgTimer.style.display = 'block'
+                    imgTimer.innerText = minutes + ":" + seconds;
                 
-                times.innerText = minutes + ":" + seconds;
                 
             }, 1000);
         }
@@ -41,10 +44,8 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
     console.log("response seconds is ===>", response.timeSeconds)
     console.log('respons minutes is --->', response.timeMinutes)
     
-    
     let currentSeconds = parseInt(response.timeSeconds);
     let currentMinutes = parseInt(response.timeMinutes)
-    
     let seconds = currentSeconds;
     let minutes = currentMinutes;
     console.log("seconds:", seconds)
@@ -52,6 +53,8 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
     if(currentSeconds != 0){
 
         btnStart.style.display = "none"
+        times.style.display = "none"
+        imgTimer.style.display = 'block'
 
         if (check1 == null) {
             
@@ -68,14 +71,16 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
         
                 if(minutes == -1){
 
-                    minutes = 20
+                    minutes = 2
                     seconds = '00'
                     clearInterval(check1);
                     btnStart.style.display = "block"
+                    alertMessage;
 
                 }
-        
-                times.innerText = minutes + ":" + seconds
+             
+                imgTimer.innerText = minutes + ":" + seconds;
+                
         
             },1000)
         }
@@ -88,50 +93,9 @@ function startTime() {
     
     printDuration()
     btnStart.style.display = "none"
-   
-    chrome.runtime.sendMessage({cmd: "START_TIME"}, response =>{
-        printDuration()
-        console.log("-----------",printDuration())
-    });
+    times.style.display = "none"
+    chrome.runtime.sendMessage({cmd: "START_TIME"});
 }
 
 // fait activer le timer
 btnStart.addEventListener('click', startTime)
-
-
-//=================================================Appels d'APIs pour les albums, films et livres
-let btnalbum = document.getElementById('btnalbum');
-let album = document.getElementById('album');
-
-btnalbum.addEventListener('click', displayAlbum);
-
-function displayAlbum() {
-    album.style.display = "block";
-}
-
-
-let btnmovie = document.getElementById('btnmovie');
-let movie = document.getElementById('movie');
-
-btnmovie.addEventListener('click', displayMovie);
-
-function displayMovie() {
-    movie.style.display = "block";
-}
-
-
-let btnbook = document.getElementById('btnbook');
-let book = document.getElementById('book');
-
-btnbook.addEventListener('click', displayBook);
-
-function displayBook() {
-    book.style.display = "block";
-}
-
-// fait supprimer le timer
-btnStop.addEventListener('click', e =>{
-    stop();
-
-})
-
