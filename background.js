@@ -4,14 +4,14 @@ let timerTime;
 let currentSeconds = 0;
 let currentMinutes = 0;
 let check = null
-
-// timeur
+let minutes = 2;
+// timer
 timerTime = function printDuration() {
 
       if (check == null) {
           
           let seconds = 59;
-          let minutes = 1;
+          minutes = 1;
           
           check = setInterval(function () {
               
@@ -25,44 +25,60 @@ timerTime = function printDuration() {
               
               if(minutes == -1){
                   
-                  minutes = 20;
+                  minutes = 2;
                   seconds = '00';
                   clearInterval(check);
-                  check = null;
+                  check = null; 
                   
-              }
-              currentSeconds = seconds;
-              currentMinutes = minutes
-              console.log(minutes + " " + seconds)
-          
-          }, 1000);
-        }
-}
+                }
+                
+                currentSeconds = seconds;
+                currentMinutes = minutes
+                console.log(minutes + " " + seconds)
+                
+              }, 1000);
+            }
+          }
 
+
+chrome.alarms.onAlarm.addListener(
+  () => {
+      chrome.notifications.create(
+          {
+              type: "basic",
+              iconUrl: "img/giphy.gif",
+              title: "Bouger, même un peu, est idéal pour votre humeur.😉",
+              message: "Être actif peut vous donner rapidement un sentiment de légèreté et de gaieté",
+          },
+          () => { }
+      )
+  },
+)
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   
   if(request.cmd === 'START_TIME'){
-    
-    // déclache le timeur
+    // déclancher le timeur
     timerTime()
-    // envoie le timeur
-    sendResponse({ time: timerTime() });
+    //déclancher l'alarme
+    chrome.alarms.create("drink_water",{delayInMinutes: minutes+1});
 
   }else if (request.cmd == 'GET_TIME') {
 
-    // envoie le timeur
+    // envoie le nouveau timer
     sendResponse({timeSeconds: currentSeconds, timeMinutes: currentMinutes})
 
   }
 
 });
 
-
-
-
+// ============================================== change all image one page on navigateur
+chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
+  if(request.img === "CHANGE"){
 chrome.runtime.onMessage.addListener(function(message, sender, senderResponse){//execute function on receiving a new message
+
     if(message.msg === "image"){
+      
       fetch('https://some-random-api.ml/img/pikachu')
         .then(response => response.text())
         .then(data =>{
@@ -73,3 +89,6 @@ chrome.runtime.onMessage.addListener(function(message, sender, senderResponse){/
         return true;//will respond asynchronously
     }
   });
+
+  }
+})
