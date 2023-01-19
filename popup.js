@@ -75,7 +75,6 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
                     seconds = '00'
                     clearInterval(check1);
                     btnStart.style.display = "block"
-                    alertMessage;
 
                 }
              
