@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
     <title>Timer Extension</title>
 </head>
@@ -25,10 +26,23 @@
 
     </div>
 
-    <div>
+    <div id="timer-container">
         <!-- à la place de p, je pense qu'il faut avoir une input et minut doit être dans value de la -->
-        <h1 id="time1">20:00</h1>
-        <input class="btn" id="btnStart" type="button" value="Start"/>
+        
+        <div id="container-t">
+            <div id="timer-lod">
+               
+                <p id="time1">2:00</p>
+                <p id="time-loding"> <img id="img-timer" src="./img/Timer.gif" alt="timer gif"></p>
+
+            </div>
+            
+        </div>
+        <div id="continair-button">
+
+            <input class="button1" id="btnStart" type="button" value="Start"/>
+        </div>
+
     </div>
     <br>
     <a  href="page2.html">
@@ -46,5 +60,6 @@
 
   
         <script src="./popup.js"></script>
+        <script src="./content.js"></script>
 </body>
 </html>
