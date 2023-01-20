@@ -5,6 +5,7 @@ body {
     min-height: 15em;
     min-width: 25em;
     background: #42B3C6;
+    height: 400px;
 }
 
 /* ----------------------------------------------- timer style */
@@ -73,6 +74,10 @@ body {
     background-color: #dcf3cf;
 }
 /* ----------------------------------------------- fin timer style */
+#aller-p2{
+    margin: 9px;
+    padding-bottom: 11px;
+}
 #titre-page1{
     width: 100%;
     margin-bottom: 5px;
@@ -179,7 +184,7 @@ h1 {
   
 .button1:hover {
     background-color: #f7c2f9;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .btn:hover {
     background-color: #ADCDDC;
@@ -191,4 +196,89 @@ h1 {
 .btn:hover h4:after {
     opacity: 1;
     right: 0;
+  }
+
+  /* ======================================== page2 */
+  .btn {
+    width: 90%;
+    display: inline-block;
+    background-color: #42B3C6
+;
+    border-radius: 10px;
+    border: 4px double #DDE2E8
+;
+    color: #EEEEEE
+;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+  }
+.btn h4 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+.btn h4:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+.btn:hover {
+    background-color: #ADCDDC
+;
+  }
+.btn:hover h4 {
+    padding-right: 25px;
+  }
+.btn:hover h4:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.img {
+    display: none;
+    margin: auto;
+    box-shadow: 7px 7px 7px black;
+}
+
+
+
+
+
+  #button-gauche-droit{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 150px;
+    margin: 9px;
+    padding-bottom: 11px;
+  }
+
+  /* ======================================== page3 */
+  #aller-page-avant{
+    margin: 9px;
+    padding-bottom: 11px;
+  }
+  #container-change-photos{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #img-titre{
+    width: 90%;
+  }
+  #container-btn-image-change{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }

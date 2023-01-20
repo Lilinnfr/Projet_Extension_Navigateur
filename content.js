@@ -1,4 +1,5 @@
 
+// ============================= crée les balise images pour pickachu
 let images = document.getElementsByTagName('img');
 for(let i = 0; i < images.length;i++){
     chrome.runtime.sendMessage({msg: 'image', index:i},function({data,index}){
