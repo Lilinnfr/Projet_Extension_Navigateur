@@ -3,6 +3,7 @@ let times = document.getElementById("time1");
 let imgTimer = document.getElementById("time-loding")
 let timeSelect = document.getElementById('time-select')
 
+// ============================ déclache le timer pour premiere fois
 let check = null
 function printDuration() {
 
@@ -38,6 +39,7 @@ function printDuration() {
         }
     }
 
+//============================= déclache le timer pour deuxième fois 
 let check1 = null
 chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
 
@@ -88,6 +90,7 @@ chrome.runtime.sendMessage({cmd: "GET_TIME"}, response =>{
 
 });
 
+// ============= active timer et comunique avec background
 function startTime() {
     
     printDuration()
