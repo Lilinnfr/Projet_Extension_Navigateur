@@ -4,13 +4,13 @@
 Deuxième projet de groupe fait à l'école (Ada Tech School) du lundi 21 novembre au mercredi 30 novembre avec [Fatou Cissé](https://github.com/Fatou-hub) et [Rouhullah Karimi](https://github.com/Huor97)
 Le but était de créer une extension qui ne nous laisse pas inactif.
 
-Langage utilisé : [![Langages](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev) 
+Langages utilisés : [![Langages](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev) 
 
-L'extension possède 3 onglets différents permettant diverses chose.  
+L'extension possède 3 onglets différents permettant diverses choses.  
 
 Le premier onglet nous propose de régler un timer. A la fin de celui-ci, une notification apparait!  
 
-<img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_1.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_2.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_9.png" alt="capture d'écran" width="180">  
+<img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_1.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_2.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_9.png" alt="capture d'écran" width="200">  
 
 Le second onglet nous propose cette fois-ci de générer un album, un film ou un livre aléatoirement grâce à un appel d'API.  
 
