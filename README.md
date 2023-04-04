@@ -12,7 +12,7 @@ Le premier onglet nous propose de régler un timer. A la fin de celui-ci, une no
 
 <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_1.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_2.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_9.png" alt="capture d'écran" width="200">  
 
-Le second onglet nous propose cette fois-ci de générer un album, un film ou un livre aléatoirement grâce à un appel d'API.  
+Le second onglet nous propose cette fois-ci de générer un album, un film ou un livre aléatoirement grâce à l'utilisation d'API.  
 
 <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_4.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_5.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_6.png" alt="capture d'écran" width="180"> <img src="https://github.com/Lilinnfr/Images/blob/63dc533c37369e88d139583194124e8a25792c3a/Extension_navigateur_7.png" alt="capture d'écran" width="180">  
 
