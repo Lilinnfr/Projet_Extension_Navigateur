@@ -1,7 +1,7 @@
 # Extension de navigateur anti-ennui
 
 
-Deuxième projet de groupe fait à l'école (Ada Tech School) du lundi 21 novembre au mercredi 30 novembre avec [Fatou Cissé](https://github.com/Fatou-hub) et [Rouhullah Karimi](https://github.com/Huor97)
+Deuxième projet de groupe fait à l'école (Ada Tech School) du lundi 21 novembre au mercredi 30 novembre 2022 avec [Fatou Cissé](https://github.com/Fatou-hub) et [Rouhullah Karimi](https://github.com/Huor97)
 Le but était de créer une extension qui ne nous laisse pas inactif.
 
 Langages utilisés : [![Langages](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev) 
